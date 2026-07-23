@@ -3,6 +3,8 @@ package main
 import (
 	"log"
 	"net"
+
+	"github.com/michaelNuel/demo-grpc/invoicer"
 )
 
 func main() {
@@ -10,4 +12,5 @@ func main() {
 	if err != nil {
 		log.Fatalf("cannot create listener %s", err)
 	}
+	invoicer.RegisterInvoicerServer()
 }  
